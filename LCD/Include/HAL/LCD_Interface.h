@@ -11,7 +11,10 @@
 #include "../LIB/bit_math.h"
 #include "../LIB/std_type.h"
 
-
+/*----LCD DATA MODES------------*/
+#define LCD_DATA_MODE_8      8
+#define LCD_DATA_MODE_4      4
+/*-------------------------------------------------------------------*/
 void HLCD_SendCommand(u8 copy_u8_command);
 
 void HLCD_VoidInit(void);
@@ -20,19 +23,15 @@ void HLCD_VoidSendData(u8 copy_8uChar);
 
 void HLCD_VoidSendString(u8 *copy_P8uString);
 
-
 void HLCD_VoidClearDisplay(void);
 
-
 void HLCD_VoidDisplayNumber(s32 copy_u32Number);
-
 
 void HLCD_VoidGoToPos(u8 copy_u8RowNum,u8 copy_u8ColumnNo);
 
 void HLCD_VoidSendSpecialCharacter(u8 *copy_pu8CharArr,u8 copy_u8PatternNum,
 								   u8 copy_u8LineNum, u8 copy_ColNum);
-
-
+/*-------------------------------------------------------------------*/
 
 #define LCD_U8_LINE0  0
 #define LCD_U8_LINE1  1
